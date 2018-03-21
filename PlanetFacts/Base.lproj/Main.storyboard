@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PlanetFacts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Earth" translatesAutoresizingMaskIntoConstraints="NO" id="emO-J6-aic">
+                                <rect key="frame" x="16" y="20" width="343" height="291.5"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PgV-9Z-TwX">
+                                <rect key="frame" x="35" y="563" width="305" height="60"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="uFj-oL-hWv"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="touchButtonWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s00-M3-zXZ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="al5-UG-7eM">
+                                <rect key="frame" x="16" y="319.5" width="343" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="al5-UG-7eM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="81f-Ni-OPZ"/>
+                            <constraint firstItem="al5-UG-7eM" firstAttribute="centerX" secondItem="PgV-9Z-TwX" secondAttribute="centerX" id="BVa-KP-Ws3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PgV-9Z-TwX" secondAttribute="bottom" constant="44" id="RHM-vu-6xE"/>
+                            <constraint firstItem="emO-J6-aic" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Rab-Yc-HZB"/>
+                            <constraint firstItem="emO-J6-aic" firstAttribute="trailing" secondItem="al5-UG-7eM" secondAttribute="trailing" id="as5-aR-QDM"/>
+                            <constraint firstItem="emO-J6-aic" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="jvU-OL-mSp"/>
+                            <constraint firstItem="PgV-9Z-TwX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="l1V-d1-C2c"/>
+                            <constraint firstItem="emO-J6-aic" firstAttribute="leading" secondItem="al5-UG-7eM" secondAttribute="leading" id="w0C-wj-cpR"/>
+                            <constraint firstItem="al5-UG-7eM" firstAttribute="top" secondItem="emO-J6-aic" secondAttribute="bottom" constant="8" symbolic="YES" id="xkj-yM-ad6"/>
+                            <constraint firstItem="emO-J6-aic" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="zbg-Io-CNi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="newFactButton" destination="PgV-9Z-TwX" id="JrH-3E-5N0"/>
+                        <outlet property="planetFactLabel" destination="al5-UG-7eM" id="W6m-v5-LdZ"/>
+                        <outlet property="planetImage" destination="emO-J6-aic" id="SQi-UN-W1f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Earth" width="600" height="450"/>
+    </resources>
+</document>
